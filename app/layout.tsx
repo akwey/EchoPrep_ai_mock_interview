@@ -13,11 +13,16 @@ export const metadata: Metadata = {
   description: "An AI-powered platform for preparing for mock interviews",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" className="dark">
       <body className={`${geistSans.className} antialiased pattern`}>
         {children}
+
         <Toaster />
       </body>
     </html>
