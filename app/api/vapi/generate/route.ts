@@ -12,10 +12,11 @@ export async function GET() {
   );
 }
 
-export async function POST(request: Request){
-  const {type,role,level,techstack,amount,userid} = await request.json();
-  try{
-    const {text:questions}= await generateText({
+export async function POST(request: Request) {
+  const { type, role, level, techstack, amount, userid } = await request.json();
+
+  try {
+    const { text: questions } = await generateText({
       model: google("gemini-2.0-flash-001"),
       prompt: `Prepare questions for a job interview.
         The job role is ${role}.
@@ -27,29 +28,33 @@ export async function POST(request: Request){
         The questions are going to be read by a voice assistant so do not use "/" or "*" or any other special characters which might break the voice assistant.
         Return the questions formatted like this:
         ["Question 1", "Question 2", "Question 3"]
-        
+
         Thank you! <3
-    `,
+      `,
     });
+
     const interview = {
-      role: role,
-       type: type,
-       level: level,
+      role,
+      type,
+      level,
       techstack: techstack.split(","),
       questions: JSON.parse(questions),
       userId: userid,
-       inalized: true,
+      finalized: true, // fixed typo
       coverImage: getRandomInterviewCover(),
-       reatedAt: new Date().toISOString(),
+      createdAt: new Date().toISOString(), // fixed typo
     };
 
-    await db.collection("interviews").add(interview);
+    // Save interview and get document reference
+    const docRef = await db.collection("interviews").add(interview);
 
-    return Response.json({success: true},{status : 200})
-    
-  }catch(error){
+    // ✅ Return interviewId to frontend
+    return NextResponse.json(
+      { success: true, interviewId: docRef.id },
+      { status: 200 }
+    );
+  } catch (error) {
     console.error(error);
-
-    return Response.json({success : false , error },{status : 500});
+    return NextResponse.json({ success: false, error }, { status: 500 });
   }
 }
