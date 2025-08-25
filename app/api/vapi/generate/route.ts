@@ -40,15 +40,15 @@ export async function POST(request: Request) {
       techstack: techstack.split(","),
       questions: JSON.parse(questions),
       userId: userid,
-      finalized: true, // fixed typo
+      finalized: true, 
       coverImage: getRandomInterviewCover(),
-      createdAt: new Date().toISOString(), // fixed typo
+      createdAt: new Date().toISOString(), 
     };
 
     // Save interview and get document reference
     const docRef = await db.collection("interviews").add(interview);
 
-    // ✅ Return interviewId to frontend
+
     return NextResponse.json(
       { success: true, interviewId: docRef.id },
       { status: 200 }
