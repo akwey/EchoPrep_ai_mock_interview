@@ -8,7 +8,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCI-prfSNMFEOFYxNwgbMROUWi8KuaRIsk",
   authDomain: "echoprep-281b4.firebaseapp.com",
   projectId: "echoprep-281b4",
-  storageBucket: "echoprep-281b4.appspot.com",   // ⚠️ small fix: should end with .appspot.com
+  storageBucket: "echoprep-281b4.appspot.com",  
   messagingSenderId: "430070487247",
   appId: "1:430070487247:web:927219cc8014afced33fba",
   measurementId: "G-1HEPTVCTVM",

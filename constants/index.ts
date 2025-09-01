@@ -1,5 +1,5 @@
 import { CreateAssistantDTO } from "@vapi-ai/web/dist/api";
-import { z } from "zod";
+ import { z } from "zod";
 
 export const mappings = {
   "react.js": "react",
@@ -218,28 +218,6 @@ export const dummyInterviews: Interview[] = [
   },
   {
     id: "2",
-    userId: "user1",
-    role: "Full Stack Developer",
-    type: "Mixed",
-    techstack: ["Node.js", "Express", "MongoDB", "React"],
-    level: "Senior",
-    questions: ["What is Node.js?"],
-    finalized: false,
-    createdAt: "2025-03-14T15:30:00Z",
-  },
-    {
-    id: "3",
-    userId: "user1",
-    role: "Full Stack Developer",
-    type: "Mixed",
-    techstack: ["Node.js", "Express", "MongoDB", "React"],
-    level: "Senior",
-    questions: ["What is Node.js?"],
-    finalized: false,
-    createdAt: "2025-03-14T15:30:00Z",
-  },
-    {
-    id: "4",
     userId: "user1",
     role: "Full Stack Developer",
     type: "Mixed",
