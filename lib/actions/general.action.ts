@@ -91,21 +91,24 @@ export async function getFeedbackByInterviewId(
 
 export async function getLatestInterviews(
   params: GetLatestInterviewsParams
-): Promise<Interview[] | null> {
+): Promise<Interview[]> {
   const { userId, limit = 20 } = params;
 
-  const interviews = await db
+  // Fetch finalized interviews sorted by createdAt
+  const snapshot = await db
     .collection("interviews")
-    .orderBy("createdAt", "desc")
     .where("finalized", "==", true)
-    .where("userId", "!=", userId)
-    .limit(limit)
+    .orderBy("createdAt", "desc")
+    .limit(limit + 10) // fetch a few extra in case we need to filter
     .get();
 
-  return interviews.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
-  })) as Interview[];
+  // Filter out the current user's interviews in JS
+  const interviews = snapshot.docs
+    .map((doc) => ({ id: doc.id, ...doc.data() } as Interview))
+    .filter((interview) => interview.userId !== userId)
+    .slice(0, limit); // take only the number you want
+
+  return interviews;
 }
 
 export async function getInterviewsByUserId(
