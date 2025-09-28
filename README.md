@@ -1,67 +1,64 @@
-EcoPrep
+# EchoPrep – AI Mock Interview Platform
+**Next.js • Vapi AI • TailwindCSS • Firebase**
 
-Next.js • Vapi AI • TailwindCSS • Firebase
+A **job interview preparation platform powered by Vapi AI Voice Agents.**  
+EcoPrep helps learners and job seekers **practice interviews with AI-driven voice interactions** and receive **instant, actionable feedback** to improve their skills.
 
-A job interview preparation platform powered by Vapi AI Voice Agents.
-EcoPrep helps learners and job seekers prepare for interviews with AI-driven voice interactions and instant feedback.
+---
 
-📋 Table of Contents
+## 📋 Table of Contents
+- 🤖 [Introduction](#-introduction)
+- ⚙️ [Tech Stack](#-tech-stack)
+- 🔋 [Features](#-features)
+- 🤸 [Quick Start](#-quick-start)
+- 🕸️ [Snippets](#-snippets)
+- 🔗 [Assets](#-assets)
+- 🚀 [More](#-more)
+- 📹 [Tutorial](#-tutorial)
 
-🤖 Introduction
+---
 
-⚙️ Tech Stack
+## 🤖 Introduction
+**EcoPrep** (aka **EchoPrep_AI_Mock_Interview**) is built with:
 
-🔋 Features
+- **Next.js** for frontend and backend logic  
+- **Firebase** for authentication and data storage  
+- **TailwindCSS** for sleek, modern styling  
+- **Vapi AI** for realistic voice-based interview simulations  
+- **Google Gemini** for AI-driven feedback and performance analysis  
 
-🤸 Quick Start
+EcoPrep delivers a **smooth, responsive, and intuitive experience** for candidates looking to improve their interview readiness.
 
-🕸️ Snippets
+---
 
-🔗 Assets
+## ⚙️ Tech Stack
+- ⚛ **Next.js** – Frontend & backend framework  
+- 🔥 **Firebase** – Authentication and real-time data storage  
+- 🎨 **TailwindCSS** – Utility-first styling for modern UI  
+- 🗣️ **Vapi AI** – AI-powered voice agents for conducting interviews  
+- 🪄 **shadcn/ui** – Accessible, reusable UI components  
+- 🤖 **Google Gemini** – Smart AI feedback & insights  
+- ✅ **Zod** – Schema validation for safe and structured data  
 
-🚀 More
+---
 
-📹 Tutorial
+## 🔋 Features
+- 🔑 **Authentication:** Secure sign-up/sign-in with Firebase  
+- 🎤 **AI Voice Interviews:** Simulate realistic interview sessions with Vapi AI  
+- 📊 **Instant Feedback:** Get detailed, actionable insights from AI after every session  
+- 📄 **Interview Transcripts:** Review past interviews to identify strengths and weaknesses  
+- 📝 **Dashboard:** Track and manage all your interview sessions in one place  
+- 💻 **Responsive UI:** Fully optimized for desktop, tablet, and mobile devices  
+- ⚡ **Reusable Architecture:** Clean, scalable codebase for future growth  
 
-🤖 Introduction
+---
 
-Built with Next.js for both frontend and backend logic, Firebase for authentication and data storage, styled using TailwindCSS, and powered by Vapi AI Voice Agents, EcoPrep is a modern and interactive platform designed to help users prepare for job interviews.
+## 🤸 Quick Start
 
-It offers a sleek, responsive, and easy-to-use interface, integrates AI models like Google Gemini for insightful feedback, and delivers a realistic interview experience through voice interactions.
-
-⚙️ Tech Stack
-
-⚛ Next.js – Frontend & backend framework
-
-🔥 Firebase – Authentication and real-time data storage
-
-🎨 TailwindCSS – Utility-first styling for a sleek UI
-
-🗣️ Vapi AI – AI-powered voice agents for conducting interviews
-
-🪄 shadcn/ui – Modern, accessible UI components
-
-🤖 Google Gemini – Provides AI-driven performance feedback
-
-✅ Zod – Schema validation for secure and structured data
-
-🔋 Features
-
-🔑 Authentication: Sign up/sign in securely with Firebase.
-
-🎤 AI Voice Interview: Simulate real-world interviews using Vapi AI agents.
-
-📊 Instant Feedback: Get actionable AI-generated insights after every session.
-
-📄 Interview Transcripts: Review and analyze your performance.
-
-📝 Dashboard: Manage all your created interviews in one place.
-
-💻 Responsive UI: Works seamlessly across desktop, tablet, and mobile devices.
-
-⚡ Reusable Architecture: Scalable codebase for future growth.
-
-
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/ecoprep.git
+cd ecoprep
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
