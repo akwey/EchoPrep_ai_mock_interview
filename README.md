@@ -6,20 +6,9 @@ EcoPrep helps learners and job seekers **practice interviews with AI-driven voic
 
 ---
 
-## 📋 Table of Contents
-- 🤖 [Introduction](#-introduction)
-- ⚙️ [Tech Stack](#-tech-stack)
-- 🔋 [Features](#-features)
-- 🤸 [Quick Start](#-quick-start)
-- 🕸️ [Snippets](#-snippets)
-- 🔗 [Assets](#-assets)
-- 🚀 [More](#-more)
-- 📹 [Tutorial](#-tutorial)
-
----
 
 ## 🤖 Introduction
-**EcoPrep** (aka **EchoPrep_AI_Mock_Interview**) is built with:
+**EchoPrep** (aka **EchoPrep_AI_Mock_Interview**) is built with:
 
 - **Next.js** for frontend and backend logic  
 - **Firebase** for authentication and data storage  
@@ -27,7 +16,7 @@ EcoPrep helps learners and job seekers **practice interviews with AI-driven voic
 - **Vapi AI** for realistic voice-based interview simulations  
 - **Google Gemini** for AI-driven feedback and performance analysis  
 
-EcoPrep delivers a **smooth, responsive, and intuitive experience** for candidates looking to improve their interview readiness.
+EchoPrep delivers a **smooth, responsive, and intuitive experience** for candidates looking to improve their interview readiness.
 
 ---
 
