@@ -34,11 +34,11 @@ import { isAuthenticated, getCurrentUser } from "@/lib/actions/auth.action";
 import LogoutButton from "@/components/logout";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
-  // ✅ Check if user is authenticated
+  // Check if user is authenticated
   const isUserAuthenticated = await isAuthenticated();
   if (!isUserAuthenticated) redirect("/sign-in");
 
-  // ✅ Get user info from server
+  //  Get user info from server
   const user = await getCurrentUser();
 
   return (
