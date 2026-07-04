@@ -1,3 +1,8 @@
+interface TranscriptMessage {
+  role: string;
+  content: string;
+}
+
 interface Feedback {
   id: string;
   interviewId: string;
@@ -10,6 +15,7 @@ interface Feedback {
   strengths: string[];
   areasForImprovement: string[];
   finalAssessment: string;
+  transcript?: TranscriptMessage[];
   createdAt: string;
 }
 
@@ -28,7 +34,7 @@ interface Interview {
 interface CreateFeedbackParams {
   interviewId: string;
   userId: string;
-  transcript: { role: string; content: string }[];
+  transcript: TranscriptMessage[];
   feedbackId?: string;
 }
 
