@@ -99,17 +99,31 @@ export async function POST(request: Request) {
 
       console.log("========== AI RESPONSE ==========");
       console.log(questionsText);
-    } catch (aiError: any) {
+    } catch (aiError: unknown) {
       console.log("========== AI ERROR ==========");
       console.dir(aiError, { depth: null });
 
-      console.log("========== AI ERROR CAUSE ==========");
-      console.dir(aiError?.cause, { depth: null });
+      if (
+        aiError &&
+        typeof aiError === "object" &&
+        "cause" in aiError
+      ) {
+        console.log("========== AI ERROR CAUSE ==========");
+        console.dir(
+          (aiError as { cause?: unknown }).cause,
+          { depth: null }
+        );
+      }
+
+      const message =
+        aiError instanceof Error
+          ? aiError.message
+          : "AI generation failed";
 
       return NextResponse.json(
         {
           success: false,
-          error: aiError?.message || "AI generation failed",
+          error: message,
         },
         { status: 500 }
       );
@@ -157,15 +171,10 @@ export async function POST(request: Request) {
       techstack: techstack
         .split(",")
         .map((t: string) => t.trim()),
-
       questions: parsedQuestions,
-
       userId: userid,
-
       finalized: true,
-
       coverImage: getRandomInterviewCover(),
-
       createdAt: new Date().toISOString(),
     };
 

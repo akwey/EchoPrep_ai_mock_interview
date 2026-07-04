@@ -96,7 +96,7 @@ const Agent = ({
       const { success, feedbackId: id } = await createFeedback({
         interviewId: interviewId!,
         userId: userId!,
-        transcript: messages,
+        transcript: messages as TranscriptMessage[],
         feedbackId,
       });
 
