@@ -8,7 +8,7 @@ EcoPrep helps learners and job seekers **practice interviews with AI-driven voic
 
 
 ## 🤖 Introduction
-**EchoPrep** (aka **EchoPrep_AI_Mock_Interview**) is built with:
+**EchoPrep** an AI Interview Platform which is built with:
 
 - **Next.js** for frontend and backend logic  
 - **Firebase** for authentication and data storage  
